@@ -1,0 +1,9 @@
+Abstraction
+Hiding the key implementation and showing what is needed/necessary
+
+1. Abstract Class
+2. Concrete Method
+3. Abstract Method
+
+
+MVC- model, view and controller
