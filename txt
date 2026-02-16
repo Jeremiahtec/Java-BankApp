@@ -8,3 +8,10 @@ Hiding the key implementation and showing what is needed/necessary
 
 MVC- model, view and controller
 EDP
+
+
+
+
+
+Read up on Java I/O, Exceptions
+Close the note pad tabs

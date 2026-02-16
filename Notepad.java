@@ -15,7 +15,8 @@ public class Notepad extends JFrame{
         JMenu editName = new JMenu("edit");
         menuBar.add(fileName);
         menuBar.add(viewName);
-        // menuBar.add(editName);
+        menuBar.add(editName);          // ← FIX 1: add the edit menu to the bar
+
         setJMenuBar(menuBar);
 
         //Options
@@ -25,6 +26,9 @@ public class Notepad extends JFrame{
         fileName.add(save);
         viewName.add(newTab);
         editName.add(bolden);
+
+        // ─── FIX 2: Create the tabbed pane before using it ───
+        tabbedPane = new JTabbedPane();
 
         JTextArea textArea = new JTextArea();
         JScrollPane scrollPane = new JScrollPane(textArea);
@@ -55,7 +59,15 @@ public class Notepad extends JFrame{
     void getContent(){
         JScrollPane scrollPane = (JScrollPane) tabbedPane.getSelectedComponent();
         JViewport viewport = scrollPane.getViewport();
-        JTextArea textArea = 
+        JTextArea textArea = (JTextArea) viewport.getView();
+
+        String content = textArea.getText();
+        System.out.println(content);
+    }
+
+    // Add this so the program can actually run
+    public static void main(String[] args) {
+        new Notepad();
     }
 
 
