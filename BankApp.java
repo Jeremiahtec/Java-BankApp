@@ -72,7 +72,7 @@ public class BankApp {
 
                 if (choice == 1) {
                     System.out.print("Enter your name: ");
-                    scanner.nextLine(); // Fix scanner bug
+                    scanner.nextLine();
                     String name = scanner.nextLine();
                     myAccount = new BankAccount(name, 0.0);
                     System.out.println("Account created for " + name);
